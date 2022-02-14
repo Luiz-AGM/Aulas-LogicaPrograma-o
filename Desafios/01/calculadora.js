@@ -5,7 +5,7 @@ function calcular (params) {
     
     const n1 = Number(document.getElementById("n1").value);
     const n2 = Number(document.getElementById("n2").value);
-    document.getElementById("resultado").value = n1+n2;
+    const resultado = document.getElementById("resultado").value = n1+n2;
     
-    console.log (n1, n2, resultado.value);
+    console.log (n1, n2, resultado);
 }
