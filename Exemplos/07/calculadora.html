@@ -1,31 +1,30 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Calculadora</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calculadora</title>
 </head>
 <body>
+  <h1>Calculadora</h1>
+  <hr>
 
-    <h1>Calculadora</h1>
-    <hr>
+  <label for="">1o número:</label>
+  <input type="number" id="num1" placeholder="0" autofocus>
 
-    <label for="">1° número</label>
-    <input title="1" type="text" id="n1" autofocus>
+  <br><br>
 
-    <br><br>
+  <label for="">2o número:</label>
+  <input type="number" id="num2" placeholder="0">
 
-    <label for="">2° número</label>
-    <input title="2" type="text" id="n2" autofocus>
+  <button onclick="calcular()">Calcular</button>
 
-    <button onclick="calcular()">Calcular</button>
+  <hr>
+  <label for="">Resultado:</label>
+  <input title="resultado" type="text" id="result" value="0" readonly>
+  <hr>
 
-    <hr>
-    <label for="">Resultado</label>
-    <input title= result type="text" id="resultado" autofocus>
-    <hr>
-
-    <script src="calculadora.js"></script>
+  <script src="calculadora.js"></script>
 </body>
 </html>
