@@ -30,6 +30,9 @@ function analisar() {
     else if (idade >= 18 && idade <=64) {
         analise = "Adulto";
     }
+    else if (idade <0) {
+        analise = "Negativo?"
+    }
     else {
         analise = "Idoso";
     }

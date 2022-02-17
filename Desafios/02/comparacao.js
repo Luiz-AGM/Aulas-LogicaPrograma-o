@@ -12,30 +12,39 @@ function comparar() {
     let sinal = document.getElementById("sinal").value;
     let resultado = null;
     switch (sinal) {
-    case document.getElementById("sinal").value = ">":
-    resultado = n1.value > n2.value;
-    break;
-    case document.getElementById("sinal").value = ">=":
-    resultado = n1.value >= n2.value
-    break;
-    case document.getElementById("sinal").value = "<=":
-    resultado = n1.value <= n2.value
-    break;
-    case document.getElementById("sinal").value = "<":
-    resultado = n1.value < n2.value;
-    break;
-    case document.getElementById("sinal").value = "==":
-    resultado = n1.value == n2.value;
-    break;
-    case document.getElementById("sinal").value = "!=":
-    resultado = n1.value != n2.value;
-    break;
-    case document.getElementById("sinal").value = "===":
-    resultado = n1.value === n2.value
-    break;
-    default : "comparador?";
-    break;
+
+        case document.getElementById("sinal").value = ">":
+            resultado = n1.value > n2.value;
+        break;
+        
+        case document.getElementById("sinal").value = ">=":
+            resultado = n1.value >= n2.value
+        break;
+    
+        case document.getElementById("sinal").value = "<=":
+            resultado = n1.value <= n2.value
+        break;
+    
+        case document.getElementById("sinal").value = "<":
+            resultado = n1.value < n2.value;
+        break;
+    
+        case document.getElementById("sinal").value = "==":
+            resultado = n1.value == n2.value;
+        break;
+    
+        case document.getElementById("sinal").value = "!=":
+            resultado = n1.value != n2.value;
+        break;
+        
+        case document.getElementById("sinal").value = "===":
+            resultado = n1.value === n2.value
+        break;
+        
+        default: null;
+        resultado = "comparador?";
     }
+    
     console.log(sinal);
     
     document.getElementById("result").value = resultado
