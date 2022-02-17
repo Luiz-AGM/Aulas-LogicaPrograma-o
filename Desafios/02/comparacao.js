@@ -2,7 +2,6 @@ console.log("===COMPARAÇÃO===")
 
 
 function comparar() {
-    console.log ("Comparando maior que")
 
     const n1 = document.getElementById("n1");
     console.log(n1.value);
@@ -11,6 +10,7 @@ function comparar() {
 
     let sinal = document.getElementById("sinal").value;
     let resultado = null;
+    
     switch (sinal) {
 
         case document.getElementById("sinal").value = ">":
@@ -44,7 +44,7 @@ function comparar() {
         default: null;
         resultado = "comparador?";
     }
-    
+
     console.log(sinal);
     
     document.getElementById("result").value = resultado
