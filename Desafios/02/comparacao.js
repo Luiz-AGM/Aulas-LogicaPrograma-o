@@ -3,49 +3,55 @@ console.log("===COMPARAÇÃO===")
 
 function comparar() {
 
-    const n1 = document.getElementById("n1");
-    console.log(n1.value);
-    const n2 = document.getElementById("n2");
-    console.log(n2.value);
+    var n1 =parseFloat(document.getElementById("n1").value);
+    var n2 = parseFloat(document.getElementById("n2").value);
+    var operador = document.getElementById("sinal").value;
+    var resultado = eval(n1+operador+n2);
 
-    let sinal = document.getElementById("sinal").value;
-    let resultado = null;
-    
-    switch (sinal) {
+    //                  ou
+    // const n1 = document.getElementById("n1");
+    // console.log(n1.value);
+    // const n2 = document.getElementById("n2");
+    // console.log(n2.value);
 
-        case document.getElementById("sinal").value = ">":
-            resultado = n1.value > n2.value;
-        break;
-        
-        case document.getElementById("sinal").value = ">=":
-            resultado = n1.value >= n2.value
-        break;
+    // let sinal = document.getElementById("sinal").value;
+    // let resultado = null;
     
-        case document.getElementById("sinal").value = "<=":
-            resultado = n1.value <= n2.value
-        break;
-    
-        case document.getElementById("sinal").value = "<":
-            resultado = n1.value < n2.value;
-        break;
-    
-        case document.getElementById("sinal").value = "==":
-            resultado = n1.value == n2.value;
-        break;
-    
-        case document.getElementById("sinal").value = "!=":
-            resultado = n1.value != n2.value;
-        break;
-        
-        case document.getElementById("sinal").value = "===":
-            resultado = n1.value === n2.value
-        break;
-        
-        default: null;
-        resultado = "comparador?";
-    }
+    // switch (sinal) {
 
-    console.log(sinal);
+    //     case sinal= ">":
+    //         resultado = n1.value > n2.value;
+    //     break;
+        
+    //     case sinal = ">=":
+    //         resultado = n1.value >= n2.value
+    //     break;
+    
+    //     case sinal = "<=":
+    //         resultado = n1.value <= n2.value
+    //     break;
+    
+    //     case sinal = "<":
+    //         resultado = n1.value < n2.value;
+    //     break;
+    
+    //     case sinal = "==":
+    //         resultado = n1.value == n2.value;
+    //     break;
+    
+    //     case sinal = "!=":
+    //         resultado = n1.value != n2.value;
+    //     break;
+        
+    //     case sinal = "===":
+    //         resultado = n1.value === n2.value
+    //     break;
+        
+    //     default: null;
+    //     resultado = "comparador?";
+    // }
+
+    // console.log(sinal);
     
     document.getElementById("result").value = resultado
 }
