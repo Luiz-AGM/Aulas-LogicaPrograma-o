@@ -13,6 +13,11 @@
   <input type="text" id="modelo">
 
   <br><br>
+<!-- 
+  <label for="">ID</label>
+  <input type="number" id="ident">
+
+  <br><br> -->
 
   <label for="">Ano:</label>
   <input type="number" id="ano">
@@ -24,12 +29,17 @@
 
   <br><br>
 
+  <label for="">Preço:</label>
+  <input type="number" id="preco">
+
+  <br><br>
+
   <label for="">Situação:</label>
 
   <select id="situacao">
-    <option value="novo">Novo</option>
-    <option value="usado">Usado</option>
-    <option value="zero">Zero KM</option>
+    <option value="Seminovo">Seminovo</option>
+    <option value="Usado">Usado</option>
+    <option value="Zero">Zero KM</option>
   </select>
 
   <br><br>
@@ -42,16 +52,23 @@
     <thead>
       <tr>
         <td>Modelo</td>
-        <td><a href="#" onclick="ordenar()">Ano</a></td>
+        <td>ID</td>
+        <td>Ano</a></td>
         <td>Cor</td>
         <td>Situação</td>
+        <td>Preço</td>
       </tr>
     </thead>
     <tbody id="lista">
       <tr>
-        <td colspan="4">Não existem veículos cadastrados!</td>
+        <td colspan="6">Não existem veículos cadastrados!</td>
       </tr>
     </tbody>
+    <tfoot id="precoTotal"> 
+      <tr>
+        <td colspan="6">Preço total dos Veiculos</td>
+      </tr>
+  </tfoot>
   </table>
   
   <script src="carros.js"></script>

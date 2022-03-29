@@ -9,30 +9,31 @@ console.log("=== CARROS ===");
 */
 
 const carros = [];
-
+const valores = []
 function adicionar() {
   // entrada
   const modelo = document.getElementById("modelo");
+  const ident = carros.length + 1;
   const ano = document.getElementById("ano");
   const cor = document.getElementById("cor");
   const situacao = document.getElementById("situacao");
-  // console.log(modelo, ano, cor, situacao);
-  console.log(modelo.value, ano.value, cor.value, situacao.value);
-  // console.log(situacao);
-  // console.log(situacao.options); // array
-  // console.log(situacao.options.selectedIndex); // indice
-  // console.log(situacao.options[situacao.options.selectedIndex].value);
+  const preco = document.getElementById("preco");
+  const precoTotal = document.getElementById("precoTotal");
 
   // processamento
   const carro = {
     modelo: modelo.value,
+    ident: ident,
     ano: ano.value,
     cor: cor.value,
-    situacao: situacao.value
+    situacao: situacao.value,
+    preco: parseFloat(preco.value)
   };
 
   console.log(carro);
-  carros.push(carro); // adiciona no array
+  carros.push(carro);
+  valores.push(carro.preco)
+  console.log(valores)
 
   // saida
   console.table(carros);
@@ -41,33 +42,37 @@ function adicionar() {
   const lista = document.getElementById("lista");
   lista.innerHTML = 
   carros
-    // .filter(function(carro) {
-    //   return carro.ano === '2015'
-    // })
     .map(function(carro) {
        return `<tr>
         <td>${carro.modelo}</td>
+        <td>${carro.ident}</td>
         <td>${carro.ano}</td>
         <td>${carro.cor}</td>
         <td>${carro.situacao}</td>
+        <td>${carro.preco}</td>
       </tr>`;
     })
     .join("");
 
-  // limpar os campos
-  modelo.value = '';
-  ano.value = '';
-  cor.value = '';
-  // situacao.value = '';
+ 
+  let total = valores.reduce(function(valor1, valor2) {
+    return valor1 + valor2;
+}, );
 
-  // dar foco no primeiro campo
+  console.log(total)
+
+  precoTotal.innerHTML =  `Valor total dos veículos: $ ${total}`
+
+ // limpar os campos
+  modelo.value = '';
+  ident.value = '';
+  ano.value = '';
+  cor.value = '#000000';
+  preco.value = '';
+
   modelo.focus();
 }
 
-function ordenar() {
-  console.log("click");
-  // lista.innerHTML = carros.sort();
-}
 
 
 
